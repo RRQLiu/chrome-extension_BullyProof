@@ -1,4 +1,4 @@
-# Chrome Extension BullyProof
+# BullyProof 📵
 
 Filter out extreme negative contents on twitter to provide a better social media environment for user who needed. 
 
@@ -15,7 +15,7 @@ The user will still have the opportunity to unfold the tweet.
 
 ![Images](/images/effect.png?row=true)
 
-## Instruction of using it
+##  Installation Instructions 🚀
 
 1. First clone the repo 
 2. Open Google Chrome Broswer: 
