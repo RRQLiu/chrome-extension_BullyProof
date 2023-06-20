@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anek+Telugu:wght@100;200;300;400;500;600;700;800&display=swap');
+
+article[role="article"][data-testid="tweet"] {
+    transition: height .3s, opacity .3s;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+/* For IE, Edge and Firefox */
+.scrollbar-hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.blocked-profiles{
+    @apply w-full py-3 flex flex-row px-3 border-y-2 items-center bg-slate-500;
+}
+
+.blocked-profiles > div {
+    @apply ml-4 overflow-hidden;
+}
+
+.blocked-profiles > img {
+    border-radius: 50%;
+}
+
+article[role="article"][data-testid="tweet"]:not(.bullyproof-handled *) {
+    animation: tweet-show 1s;
+}
+
+@keyframes tweet-show {
+    0% {
+        opacity: 0.05;
+    }
+
+    70% {
+        opacity: 0.1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.bullyproof-negative article[role="article"][data-testid="tweet"] {
+    opacity: 0;
+}
+
+
+.bullyproof-tweet-status-bar {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 3px 16px;
+    padding-right: 12px;
+    /* line-height: 20px; */
+    font-size: 14px;
+    color: rgb(83, 100, 113);
+
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+/* unfold/unfold bottom */
+
+.bullyproof-slide-button {
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    border-radius: 100px;
+    padding: 3px;
+    cursor: pointer;
+    transition: transform .5s;
+}
+
+.bullyproof-slide-button:hover {
+    background-color: rgba(29, 155, 240, 0.1);
+    color: rgb(29, 155, 240);
+}
+
+.bullyproof-slide-button:active {
+    background-color: rgba(29, 155, 240, 0.2);
+    color: rgb(29, 155, 240);
+}
+
+/* when tweets is unfold -> the fold buttom facing upward */
+.bullyproof-slide-button.bullyproof-slide-button-up {
+    transform: rotate(180deg);
+}
+
+
+.bullyproof-bar-status {
+    transition: opacity .3s;
+}

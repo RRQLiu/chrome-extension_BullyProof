@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta
+      name="viewport"
+      charset="utf-8"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <link rel="stylesheet" href="/css/output.css" />
+    <script src="../node_modules/flowbite/dist/flowbite.js"></script>
+    <script type="module" src="./../dist/options/options.js" defer></script>
+  </head>
+
+  <body class="bg-midnightBlue">
+    <main class="mx-4">
+      <div class="w-full flex items-center relative">
+        <img
+          src="/images/logo.png"
+          class="w-40 md:w-56 absolute right-0 top-2"
+          alt=""
+        />
+      </div>
+
+      <div class="justify-center md:justify-start flex flex-row items-center h-screen gap-4">
+        <div class="flex flex-col gap-4 relative">
+          <h1
+            class="select-none text-5xl text-transparent bg-clip-text font-light font-spartan uppercase text-light_teal"
+          >
+            Settings
+          </h1>
+          <hr
+            class="bg-gradient-to-r from-light_teal to-dark_teal h-1 max-w-lg"
+          />
+          <h1
+            class="select-none text-4xl font-bold font-spartan text-transparent bg-clip-text text-light_teal"
+          >
+            Basic
+          </h1>
+          <div class="flex flex-row items-center gap-2 relative">
+            <span class="text-xl font-medium font-anektelugu text-white"
+              >Enable Smart Filter</span
+            >
+            <button
+              id="infoIcon"
+              data-tooltip-target="tooltip-top"
+              data-tooltip-placement="top"
+              type="button"
+              class="text-white"
+            >
+              &#9432;
+            </button>
+            <label
+              for="checked-toggle"
+              class="inline-flex items-center cursor-pointer"
+            >
+              <input
+                type="checkbox"
+                value=""
+                id="checked-toggle"
+                class="sr-only peer"
+                checked=""
+              />
+
+              <div
+                class="absolute top-0.5 w-11 h-6 rounded-full peer peer-focus:ring-4 peer-focus:ring-teal-400 bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-teal-300"
+              ></div>
+            </label>
+          </div>
+
+          <div id="account-data" class="flex gap-4 items-center">
+            <div
+              id="blocked-users"
+              class="bg-slate-400 rounded-lg flex flex-col overflow-scroll scrollbar-hide h-64 max-w-lg flex-grow"
+            >
+              <div
+                class="text-white font-spartan text-center text-xl py-2 flex-grow"
+              >
+                Following
+                <div
+                  id="login-notice"
+                  class="border-t-2 border-white py-3 flex flex-col"
+                >
+                <div class="text-cyan-100 mx-1">
+                  Please login to see users you are following
+
+                </div>
+                  
+                  <button
+                    id="login-twitter"
+                    class="mx-10 mt-5 p-3 text-lg font-bold font-spartan border-2 border-white border-solid text-cyan-100 bg-slate-500 rounded-md"
+                  >
+                    Login to Twitter
+                    <svg
+                      class="inline-block fill-cyan-100"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- <div id="muted-users" class="w-48 bg-slate-400 rounded-lg">
+              <div class="text-white font-spartan text-center text-xl py-2">
+                Muted Users
+              </div>
+            </div> -->
+          </div>
+
+          <div
+            id="tooltip-top"
+            role="tooltip"
+            class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-normal font-anektelugu text-gray-400 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip bg-white"
+          >
+            Uses AI to filter out potentially offensive words.
+            <div class="tooltip-arrow" data-popper-arrow></div>
+          </div>
+          <!-- <span class="py-5"></span> -->
+          <h1
+            class="mt-10 select-none text-4xl font-extrabold font-spartan text-transparent bg-clip-text text-light_teal"
+          >
+            Advanced
+          </h1>
+
+          <div class="flex flex-row items-center gap-2">
+            <h1
+              class="select-none text-xl font-medium font-anektelugu text-white"
+            >
+              Negative Keywords
+            </h1>
+            <button
+              id="infoIcon2"
+              data-tooltip-target="tooltip-right2"
+              data-tooltip-placement="right"
+              type="button"
+              class="mb-0 text-white"
+            >
+              &#9432;
+            </button>
+          </div>
+
+          <div
+            id="tooltip-right2"
+            role="tooltip"
+            class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-normal font-anektelugu text-gray-400 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip bg-white"
+          >
+            Add custom negative keywords.
+            <div class="tooltip-arrow" data-popper-arrow></div>
+          </div>
+          <div class="flex flex-row gap-2">
+            <textarea
+              id="keywords-input"
+              rows="1"
+              class="resize-none block p-2.5 w-80 text-sm rounded-lg border bg-white border-gray-600 placeholder-gray-400 text-slate-800 focus:ring-light_teal focus:border-light_teal"
+              placeholder="Enter keyword..."
+            ></textarea>
+            <button
+              id="save-keywords-button"
+              class="font-light uppercase font-anektelugu bottom-0 right-0 text-lg px-5 rounded-lg bg-teal-300 hover:bg-teal-400 active:bg-teal-500 placeholder-gray-400 text-white"
+            >
+              Save
+            </button>
+          </div>
+        </div>
+        <div class="hidden md:flex md:h-screen md:flex-grow">
+          <video
+            src="../videos/animation.mp4"
+            type="video/mp4"
+            muted
+            class="vid object-cover h-full w-full"
+            loop
+          ></video>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

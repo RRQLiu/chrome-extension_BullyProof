@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/css/output.css">
+</head>
+
+<body class="bg-slate-800 py-5 w-max h-max">
+    <main class="mt-5">
+        <div class="grid h-max place-items-center px-5">
+            <button id="toggle-button">
+                <img class="h-24 w-24 hover:scale-105"></img>
+            </button>
+            <p class="text-white text-lg">
+               Blocked Counter:
+               <span id="blocked-counter">
+               </span> 
+            </p>
+        </div>
+        <div class="float-right">
+            <button id="settings-button">
+                <img src="/images/settings.svg" class="h-7 w-7 m-2 hover:-rotate-90 hover:scale-110"></img>
+            </button>
+        </div>
+        <div>
+        </div>
+
+    </main>
+    <script type="module" src="popup.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+fastapi==0.87.0
+uvicorn==0.19.0
+pydantic==1.10.2
+transformers==4.25.1
+numpy==1.23.4
+pandas==1.5.1
+scipy==1.9.3
+torch==1.13.0
