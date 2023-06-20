@@ -2,7 +2,7 @@
 
 Filter out extreme negative contents on twitter to provide a better social media environment for user who needed. 
 
-Model using: Roberta 
+Model using: RoBERTa
 
 ## Current Extension
 ![Images](/images/setting.png?row=true)
